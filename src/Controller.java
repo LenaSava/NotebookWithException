@@ -13,7 +13,6 @@ public class Controller {
         this.view = view;
     }
 
-    // The Work method
     public void processUser() {
         Scanner sc = new Scanner(System.in);
 
