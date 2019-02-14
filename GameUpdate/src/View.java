@@ -1,5 +1,5 @@
 public class View {
-    public String gameRule = " ~~~~ GAME RULE: Guess the number (from 0 till 100).~~~~~";
+    public String gameRule = " ~~~~ GAME RULE: Please write 2 numbers - it will be the range from and to .~~~~~";
     public String letTheGameStart = "Enter your number: ";
     public String myNumberLess = "My number is less.";
     public String myNumberBigger = "My number is bigger.";

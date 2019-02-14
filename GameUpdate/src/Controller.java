@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Controller {
 
-    public int userNumber = 0;
+    public int userNumber, firstNumber, lastNumber = 0;
     public int secretNumber = 0;
 
     Model model;
@@ -19,6 +19,12 @@ public class Controller {
         Scanner sc = new Scanner(System.in);
 
         view.printMessage(view.gameRule);
+        firstNumber = sc.nextInt();
+        model.setMinBarrier(firstNumber);
+        lastNumber = sc.nextInt();
+        model.setMaxBarrier(lastNumber);
+        view.printMessage(model.rulesWithRange());
+        model.setSecretNumber(firstNumber, lastNumber);
         secretNumber = model.getSecretNumber();
         System.out.println(secretNumber);
         model.setUserNumber(inputWithScanner(sc, secretNumber));
@@ -29,6 +35,8 @@ public class Controller {
 
         do {
             view.printMessage(view.letTheGameStart);
+
+
             userNumber = sc.nextInt();
 
             if( userNumber > secretNumber) {
